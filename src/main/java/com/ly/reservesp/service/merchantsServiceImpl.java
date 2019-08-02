@@ -11,6 +11,11 @@ public class merchantsServiceImpl implements  merchantsService {
     @Autowired
     merchantsMapper mM;
 
+    /**
+     * 商家验证实现
+     * @param merchants
+     * @return
+     */
     @Override
     public int merchantsCount(merchants merchants) {
         return mM.merchantsCount(merchants);

@@ -16,5 +16,4 @@ public interface FoodInformationMapper {
     public List<FoodInformation> findFoodInfo();
 
 
-
 }
