@@ -22,7 +22,7 @@ public class FoodInformationController {
     @RequestMapping("/list")
     public List<FoodInformation>  findFoodInfo(){
 
-        System.out.println("1111");
+
         return  fis.findFoodInfo();
     }
 
