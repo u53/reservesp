@@ -1,22 +1,16 @@
 package com.ly.reservesp.controller;
 
 
+import com.ly.reservesp.service.FoodTypeService;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
-/**
- * 食品类别
- */
-@Data
+@Controller
 public class FoodTypeController {
 
-    /**
-     * 商品分裂Id
-     */
-    private int foodTypeId;
+    @Autowired
+    FoodTypeService fts;
 
-    /**
-     * 商品类别
-     */
-    private String foodTypeName;
 
 }

@@ -1,20 +1,14 @@
 package com.ly.reservesp.controller;
 
+import com.ly.reservesp.service.sellingTimeService;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
-/**
- * 订单时间状态
- */
-@Data
+
+@Controller
 public class sellingTimeController {
 
-    /**
-     * 食品时间段编号
-     */
-    private int sellingTimeId;
-
-    /**
-     * 售卖时间段名称
-     */
-    private String sellingTimeName;
+    @Autowired
+    sellingTimeService sts;
 }
