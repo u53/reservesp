@@ -5,6 +5,9 @@
 
 <mapper namespace="com.ly.reservesp.dao.FoodInformationMapper">
 
+    <select id="findFoodInfo" resultType="FoodInformation">
+        select * from FoodInformation
+    </select>
 
 
 </mapper>
