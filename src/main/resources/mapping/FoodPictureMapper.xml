@@ -5,6 +5,18 @@
 
 <mapper namespace="com.ly.reservesp.dao.FoodPictureMapper">
 
+    <select id="FoodPictureList" parameterType="FoodPicture" resultType="FoodPicture">
 
+    SELECT * FROM FoodPicture INNER JOIN  FoodInformation ON FoodPicture.foodInfoId = FoodInformation.foodInfoId
+    <where>
+
+        <if test="foodInfo != null">
+
+            and FoodInformation.foodInfoId = #{foodInfo.foodInfoId}
+
+        </if>
+    </where>
+
+    </select>
 
 </mapper>
