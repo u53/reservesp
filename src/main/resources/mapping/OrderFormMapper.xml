@@ -23,7 +23,7 @@
             <if test="amount != 0">
                 and  amount = #{amount}
             </if>
-            <if test="reservations != null and reservations,reserveId != 0">
+            <if test="reservations != null and reservations.reserveId != 0">
                 and  reserveId = #{reservations.reserveId}
             </if>
             <if test="merchants != null ">
