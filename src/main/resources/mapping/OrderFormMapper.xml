@@ -5,6 +5,31 @@
 
 <mapper namespace="com.ly.reservesp.dao.OrderFormMapper">
 
-
+    <select id="findOrderFormInfo" resultType="orderForm" parameterType="orderForm">
+        SELECT * FROM orderform
+        INNER JOIN foodinformation ON orderform.`foodInfoId` = foodinformation.`foodInfoId`
+        INNER JOIN reservations ON orderform.`reserveId` = reservations.`reserveId`
+        INNER JOIN merchants ON orderform.`merId` = merchants.`merchantsId`
+        <where>
+            <if test="orderId !=0">
+                and  orderId = #{orderId}
+            </if>
+            <if test="orderStatus !=0">
+                and  orderStatus = #{orderStatus}
+            </if>
+            <if test="foodInformation !=null and foodInformation.foodInfoId != 0">
+                and  foodInfoId = #{FoodInformation.foodInfoId}
+            </if>
+            <if test="amount != 0">
+                and  amount = #{amount}
+            </if>
+            <if test="reservations != null and reservations,reserveId != 0">
+                and  reserveId = #{reservations.reserveId}
+            </if>
+            <if test="merchants != null ">
+                and  merId = #{reservations.merchantsId}
+            </if>
+        </where>
+    </select>
 
 </mapper>
