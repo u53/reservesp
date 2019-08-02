@@ -5,6 +5,10 @@
 
 <mapper namespace="com.ly.reservesp.dao.merchantsMapper">
 
+    <select id="merchantsCount" parameterType="merchants">
 
+        select count(*) from merchants where merchantsName = #{merchantsName}  and mergechantsPassword = #{mergechantsPassword}
+
+    </select>
 
 </mapper>
