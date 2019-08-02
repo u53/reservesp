@@ -15,7 +15,7 @@ public class FoodInformationServiceImpl implements FoodInformationService {
     FoodInformationMapper fim;
 
     @Override
-    public List<FoodInformation> findFoodInfo() {
-        return fim.findFoodInfo();
+    public List<FoodInformation> findFoodInfo(FoodInformation FoodInformation) {
+        return fim.findFoodInfo(FoodInformation);
     }
 }

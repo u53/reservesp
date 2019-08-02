@@ -20,10 +20,10 @@ public class FoodInformationController {
     FoodInformationService fis;
 
     @RequestMapping("/list")
-    public List<FoodInformation>  findFoodInfo(){
+    public List<FoodInformation>  findFoodInfo(FoodInformation FoodInformation){
 
 
-        return  fis.findFoodInfo();
+        return  fis.findFoodInfo(FoodInformation);
     }
 
 

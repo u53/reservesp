@@ -8,5 +8,5 @@ import java.util.List;
 
 public interface FoodInformationService {
 
-    public List<FoodInformation> findFoodInfo();
+    public List<FoodInformation> findFoodInfo(FoodInformation FoodInformation);
 }

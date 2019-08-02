@@ -13,7 +13,7 @@ public interface FoodInformationMapper {
      * 查找食品
      * @return 食品集合
      */
-    public List<FoodInformation> findFoodInfo();
+    public List<FoodInformation> findFoodInfo(FoodInformation FoodInformation);
 
 
 }

@@ -5,13 +5,37 @@
 
 <mapper namespace="com.ly.reservesp.dao.FoodInformationMapper">
 
-    <select id="findFoodInfo" resultType="FoodInformation">
+    <select id="findFoodInfo" resultType="FoodInformation" parameterType="FoodInformation">
 
         SELECT * FROM FoodInformation
         INNER JOIN SellingTime ON
         SellingTime.sellingTimeId = FoodInformation.sellingTimeId
         INNER JOIN foodType ON
          foodType.foodTypeId = FoodInformation.foodTypeId;
+         <where>
+             <if test= "#{foodInfoId}!= ''  and #{foodInfoId} !=0">
+
+             </if>
+             <if test="#{foodInfoName} != '' and  #{foodInfoName}!=null ">
+
+             </if>
+             <if test=" #{price}!= '' and #{price}!=0 ">
+
+             </if>
+             <if test="#{foodTypeId} != '' and #{foodTypeId} !=0 ">
+
+             </if>
+             <if test="">
+
+             </if>
+             <if test="">
+
+             </if>
+             <if test="">
+
+             </if>
+         </where>
+
 
     </select>
 
