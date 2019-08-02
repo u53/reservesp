@@ -5,6 +5,23 @@
 
 <mapper namespace="com.ly.reservesp.dao.ReservationsMapper">
 
+    <select id="findReservationsInfo" resultType="reservations" parameterType="Reservations">
+        select  * from Reservations inner join  dinnertable on dinnertable.tableId = Reservations.tableId
+        <where>
+            <if test="reserveId !=0">
+                and  reserveId = #{reserveId}
+            </if>
+            <if test="reserveName !=null and reserveName !=''">
+                and reserveName like concat('%',#{reserveName},'%')
+            </if>
+            <if test="dinnertable !=null and dinnertable.tableId !=''">
+                and dinnertable.tableId = #{dinnertable.tableId}
+            </if>
+            <if test="reserveNum != 0">
+                and reserveNum = #{reserveNum}
+            </if>
 
+        </where>
+    </select>
 
 </mapper>
