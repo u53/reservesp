@@ -24,7 +24,7 @@ public class sellingTimeController {
      * @param sellingTime
      * @return 时间段集合
      */
-    @RequestMapping("/list")
+    @RequestMapping("/sellingTimeList")
     public List<sellingTime> findSellingTime(sellingTime sellingTime){
 
         
