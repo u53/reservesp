@@ -6,7 +6,13 @@
 <mapper namespace="com.ly.reservesp.dao.FoodInformationMapper">
 
     <select id="findFoodInfo" resultType="FoodInformation">
-        SELECT * FROM FoodInformation INNER JOIN SellingTime ON SellingTime.sellingTimeId = FoodInformation.sellingTimeId INNER JOIN foodType ON foodType.foodTypeId = FoodInformation.foodTypeId;
+
+        SELECT * FROM FoodInformation
+        INNER JOIN SellingTime ON
+        SellingTime.sellingTimeId = FoodInformation.sellingTimeId
+        INNER JOIN foodType ON
+         foodType.foodTypeId = FoodInformation.foodTypeId;
+
     </select>
 
 
