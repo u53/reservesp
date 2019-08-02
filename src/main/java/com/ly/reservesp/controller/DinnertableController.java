@@ -18,7 +18,7 @@ public class DinnertableController {
 
     @RequestMapping("/dinnertableList")
     public List<Dinnertable> DinnertableList(Dinnertable Dinnertable){
-
+        Dinnertable.setTableId(1);
         return ds.DinnertableList(Dinnertable);
 
     }
