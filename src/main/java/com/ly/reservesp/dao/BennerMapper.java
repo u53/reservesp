@@ -1,4 +1,4 @@
 package com.ly.reservesp.dao;
 
-public interface bennerMapper {
+public interface BennerMapper {
 }
