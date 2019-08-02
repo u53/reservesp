@@ -7,6 +7,14 @@
 
     <select id="findSellingTime" resultType="sellingTime" parameterType="sellingTime">
         select  * from sellingTime
+        <where>
+            <if test=" sellingTimeId != 0 ">
+                and  sellingTimeId = #{sellingTimeId}
+            </if>
+            <if test="  sellingTimeName != '' and sellingTimeName != null ">
+                and sellingTimeName like concat('%',#{sellingTimeName},'%')
+            </if>
+        </where>
     </select>
 
 </mapper>
