@@ -19,6 +19,6 @@ public class FoodPicture {
     /**
      *食品信息编号
      */
-    private FoodInformation foodInfoId;
+    private FoodInformation foodInfo;
 
 }

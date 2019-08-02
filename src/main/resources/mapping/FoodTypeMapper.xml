@@ -5,6 +5,10 @@
 
 <mapper namespace="com.ly.reservesp.dao.FoodTypeMapper">
 
+    <select id="foodTypeList" resultType="FoodType">
 
+        SELECT * FROM FoodType
+
+    </select>
 
 </mapper>
