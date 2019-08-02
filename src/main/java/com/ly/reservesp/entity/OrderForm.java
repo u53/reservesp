@@ -26,7 +26,7 @@ public class OrderForm {
     /**
      *食品信息编号
      */
-    private int   foodInfoId;
+    private FoodInformation   foodInformation;
     /**
      *总金额
      */
