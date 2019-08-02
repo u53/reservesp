@@ -4,6 +4,10 @@ import lombok.Data;
 
 import java.util.Date;
 
+
+/**
+ *餐桌
+ */
 @Data
 public class Dinnertable {
 

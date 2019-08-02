@@ -5,6 +5,10 @@ import lombok.Data;
 
 import java.util.Date;
 
+
+/**
+ *定单信息
+ */
 @Data
 public class OrderForm {
     /**

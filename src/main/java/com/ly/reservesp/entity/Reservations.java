@@ -5,6 +5,10 @@ import lombok.Data;
 
 import java.util.Date;
 
+
+/**
+ *预约表
+ */
 @Data
 public class Reservations {
 
