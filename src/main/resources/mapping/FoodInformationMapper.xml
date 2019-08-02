@@ -11,29 +11,38 @@
         INNER JOIN SellingTime ON
         SellingTime.sellingTimeId = FoodInformation.sellingTimeId
         INNER JOIN foodType ON
-         foodType.foodTypeId = FoodInformation.foodTypeId;
+         foodType.foodTypeId = FoodInformation.foodTypeId
          <where>
-             <if test= "#{foodInfoId}!= ''  and #{foodInfoId} !=0">
+             <if test= "foodInfoId!= ''  and foodInfoId !=0">
+
+                and foodInfoId = #{foodInfoId}
+             </if>
+             <if test="foodInfoName != '' and  foodInfoName!=null ">
+
+                and foodInfoName like concat('%',#{foodInfoName},'%')
 
              </if>
-             <if test="#{foodInfoName} != '' and  #{foodInfoName}!=null ">
+             <if test=" price != '' and price !=0 ">
+
+                and price = #{price}
 
              </if>
-             <if test=" #{price}!= '' and #{price}!=0 ">
+             <if test="foodType != null  ">
+
+                    and foodType.foodTypeId = #{foodType.foodTypeId}
 
              </if>
-             <if test="#{foodTypeId} != '' and #{foodTypeId} !=0 ">
+             <if test=" sellingTime != null">
+
+                    and sellingTime.sellingTimeId = #{sellingTime.sellingTimeId}
 
              </if>
-             <if test="">
+             <if test="foodStatus !=''">
+
+                    and foodStatus = #{foodStatus}
 
              </if>
-             <if test="">
 
-             </if>
-             <if test="">
-
-             </if>
          </where>
 
 
