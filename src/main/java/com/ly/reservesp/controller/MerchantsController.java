@@ -14,6 +14,12 @@ public class MerchantsController {
     @Autowired
     merchantsService ms;
 
+    /**
+     * 登录入口
+     *商家登录验证
+     * @param merchants
+     * @return
+     */
     @RequestMapping("/login")
     public int merchantsCount(merchants merchants){
 
@@ -22,5 +28,7 @@ public class MerchantsController {
         return ms.merchantsCount(merchants);
 
     }
+
+
 
 }
