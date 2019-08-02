@@ -1,0 +1,36 @@
+
+server:
+  port: 8763
+
+
+spring:
+  application:
+    name: SERVICE-PROVIDER
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hld?serverTimezone=UTC
+    username: root
+    password: ok
+  jackson:
+    date-format: yyyy-MM-dd
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+mybatis:
+  configuration:
+    auto-mapping-behavior: full
+  type-aliases-package: com.ly.reservesp.entity
+  mapper-locations: classpath:mapping/*.xml
+
+
+logging:
+  level:
+    com:
+      zb:
+        sp:
+          dao:  debug
