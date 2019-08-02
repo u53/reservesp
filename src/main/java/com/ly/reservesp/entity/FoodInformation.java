@@ -27,7 +27,7 @@ public class FoodInformation {
     /**
      *食品分类编号
      */
-    private FoodType foodTypeId;
+    private FoodType foodType;
     /**
      *食品描述
      */
@@ -39,7 +39,7 @@ public class FoodInformation {
     /**
      *售卖时间(售卖时间表外键)
      */
-    private sellingTime sellingTimeId;
+    private sellingTime sellingTime;
     /**
      *食品状态(01)
      */
