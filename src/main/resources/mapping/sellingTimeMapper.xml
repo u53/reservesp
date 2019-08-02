@@ -5,6 +5,8 @@
 
 <mapper namespace="com.ly.reservesp.dao.sellingTimeMapper">
 
-
+    <select id="findSellingTime" resultType="sellingTime" parameterType="sellingTime">
+        select  * from sellingTime
+    </select>
 
 </mapper>
