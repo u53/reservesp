@@ -6,5 +6,31 @@
 <mapper namespace="com.ly.reservesp.dao.DinnertableMapper">
 
 
+    <select id="DinnertableList" resultType="Dinnertable" parameterType="Dinnertable">
+
+        SELECT tableId,tableName,tableStatus,merchantsName FROM Dinnertable
+        INNER JOIN merchants ON
+        Dinnertable.merId = merchants.merchantsId
+        <where>
+            <if test = "tableId != null ">
+
+                and tableId = #{tableId}
+
+            </if>
+            <if test="tableName != null ">
+
+                and tableName = #{tableName}
+
+            </if>
+            <if test="tableStatus != null ">
+
+                and tableStatus = #{tableStatus}
+
+            </if>
+        </where>
+
+
+    </select>
+
 
 </mapper>
