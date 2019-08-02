@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("/FoodInformation")
+@RestController
+@RequestMapping("/FoodInformation")
 public class FoodInformationController {
 
     @Autowired
