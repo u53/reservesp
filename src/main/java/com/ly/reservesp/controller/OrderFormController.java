@@ -21,7 +21,7 @@ public class OrderFormController {
     public List<OrderForm> findOrderFormInfo(OrderForm orderForm){
 
         //订单表赋值有问题
-        orderForm.getReservations().setReserveId(1);
+        //orderForm.getReservations().setReserveId(1);
 
         return ofs.findOrderFormInfo(orderForm);
     }

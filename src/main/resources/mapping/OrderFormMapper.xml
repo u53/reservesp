@@ -20,11 +20,11 @@
             <if test="foodInformation !=null and foodInformation.foodInfoId != 0">
                 and  foodInfoId = #{FoodInformation.foodInfoId}
             </if>
-            <if test="amount != 0">
+            <if test="amount != 0 and amount !=null">
                 and  amount = #{amount}
             </if>
             <if test="reservations != null and reservations.reserveId != 0">
-                and  reserveId = #{reservations.reserveId}
+                and  orderform.reserveId = #{reservations.reserveId}
             </if>
             <if test="merchants != null ">
                 and  merId = #{reservations.merchantsId}
