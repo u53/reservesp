@@ -5,6 +5,9 @@
 
 <mapper namespace="com.ly.reservesp.dao.BennerMapper">
 
+    <select id="bennerList" resultType="Benner">
 
+        SELECT * FROM benner;
+    </select>
 
 </mapper>

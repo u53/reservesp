@@ -27,7 +27,6 @@ public class sellingTimeController {
     @RequestMapping("/list")
     public List<sellingTime> findSellingTime(sellingTime sellingTime){
 
-        System.out.println("1111");
         return sts.findSellingTime(sellingTime);
     }
 
