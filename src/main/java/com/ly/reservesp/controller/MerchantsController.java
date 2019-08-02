@@ -5,10 +5,11 @@ import com.ly.reservesp.service.merchantsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/admin")
-public class merchantsControllerController {
+public class MerchantsController {
 
     @Autowired
     merchantsService ms;
@@ -16,6 +17,8 @@ public class merchantsControllerController {
     @RequestMapping("/login")
     public int merchantsCount(merchants merchants){
 
+        merchants.setMerchantsName("cmx");
+        merchants.setMergechantsPassword("778899");
         return ms.merchantsCount(merchants);
 
     }
