@@ -9,5 +9,5 @@ public interface merchantsService {
      * @param merchants
      * @return
      */
-    public int merchantsCount(merchants merchants);
+    public merchants merchantsCount(merchants merchants);
 }

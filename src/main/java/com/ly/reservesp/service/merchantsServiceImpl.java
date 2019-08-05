@@ -17,7 +17,7 @@ public class merchantsServiceImpl implements  merchantsService {
      * @return
      */
     @Override
-    public int merchantsCount(merchants merchants) {
+    public merchants merchantsCount(merchants merchants) {
         return mM.merchantsCount(merchants);
     }
 }

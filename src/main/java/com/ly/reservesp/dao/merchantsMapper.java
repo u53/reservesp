@@ -9,7 +9,7 @@ public interface merchantsMapper {
      * @param merchants
      * @return
      */
-    public int merchantsCount(merchants merchants);
+    public merchants merchantsCount(merchants merchants);
 
 
 

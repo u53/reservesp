@@ -21,7 +21,7 @@ public class MerchantsController {
      * @return
      */
     @RequestMapping("/login")
-    public int merchantsCount(merchants merchants){
+    public merchants merchantsCount(merchants merchants){
 
         merchants.setMerchantsName("cmx");
         merchants.setMergechantsPassword("778899");
