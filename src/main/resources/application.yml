@@ -1,4 +1,3 @@
-
 server:
   port: 8763
 
@@ -33,4 +32,4 @@ logging:
     com:
       ly:
         reservesp:
-              dao:  debug
+          dao:  debug
